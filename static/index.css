@@ -202,6 +202,7 @@ body {
     font-size: 70pt;
     font-weight: bold;
     font-family: 'PT sans';
+    overflow: hidden;
 }
 
 .sec-2 {
@@ -281,6 +282,11 @@ body {
 
 .who-am-i .c-3nd p {
     text-align: left;
+}
+
+.who-am-i a {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .div-red {
@@ -370,6 +376,7 @@ body {
 .info-rect {
     position: relative;
     display: none;
+    margin-bottom: 1rem;
 }
 
 .fade-in {
@@ -443,6 +450,7 @@ body {
 .info-rect .date .img {
     width: 35px;
     height: 35px;
+    margin: 0 1rem;
 }
 
 .info-rect .content {

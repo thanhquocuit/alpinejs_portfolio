@@ -6,7 +6,7 @@
   <link rel="icon" href="./static/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using Alpine JS" />
+  <meta name="description" content="Thanh Quoc Pham, full stack developer" />
   <link rel="apple-touch-icon" href="./static/logo192.png" />
   <link rel="manifest" href="./static/manifest.json" />
   <link href="//cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -36,7 +36,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
             <li class="nav-item">
-              <a class="nav-link highlight" aria-current="page" href="#resume">Resume</a>
+              <!--<a class="nav-link highlight" aria-current="page" href="#resume">Resume</a>-->
+              <a class="nav-link" aria-current="page" href="#resume">Resume</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#professional">Professional</a>
@@ -86,7 +87,9 @@
             skills, leadership and management are also important aspects of the development process, I always
             concentrate on improving my self-management, management, and leadership skills to ensure the
             progress and success of projects</p>
-          <button><i class="fa-solid fa-download"></i> &nbsp; Download CV</button>
+          <a href="./static/Resume-2022-Thanh-Quoc-Pham.pdf" target="_blank">
+            <button id="download-cv"><i class="fa-solid fa-download"></i> &nbsp; Download CV</button>
+          </a>
         </div>
         <div class="col">
           <img src="./static/img/quoc-square.png" alt="quoc" style="border-radius: 10px;" />
@@ -99,22 +102,22 @@
               <img src="./static/img/icon_6.png" alt="" width="32px" />
               <span>Web Development</span>
             </h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi expedita.</p>
+            <p>Full stack web development.</p>
             <h4 class="mt">
               <img src="./static/img/icon_4.png" alt="" width="32px" />
               <span>Web Services/API</span>
             </h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi expedita.</p>
+            <p>SSL, OAuth, RESTful and Websocket</p>
             <h4 class="mt">
               <img src="./static/img/icon_8.png" alt="" width="32px" />
               <span>Architecture</span>
             </h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi expedita.</p>
+            <p>Large-scale systems with multi-servers, microservice.</p>
             <h4 class="mt">
               <img src="./static/img/icon_7.png" alt="" width="32px" />
               <span>Cloud</span>
             </h4>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi expedita.</p>
+            <p>Deploying service in AWS or dedicated server.</p>
           </div>
         </div>
       </div>
@@ -225,8 +228,9 @@
     <!-- my resume -->
     <section x-data="{ tab: 0 }">
       <div class="resume-tab mb-5">
-        <button class="btn btn-link" @click="tab = 0">Experience</button>
-        <button class="btn btn-link" @click="tab = 1">Education</button>
+        <button class="btn btn-link" @click="tab = 0">Experience (in Canada)</button>
+        <button class="btn btn-link" @click="tab = 1">Experience (in Viet Nam)</button>
+        <button class="btn btn-link" @click="tab = 2">Education</button>
       </div>
       <!-- Bounce Back Digital -->
       <div class="info-rect" :class=" tab == 0 && 'fade-in' ">
@@ -248,14 +252,14 @@
                 <p>Present</p>
               </div>
             </div>
-            <div class="date d-flex justify-content-evenly mt-4">
+            <div class="date d-flex justify-content-start mt-4">
               <div class="img">
                 <!-- <i class="mt-2 fa-solid fa-city fa-2x"></i> -->
                 <img src="./static/img/bounce-back-digital.png" alt="Bounce Back Digital" width="100%" />
               </div>
               <div>
                 <h5>Bounce Back Digital</h5>
-                <h6>Ho Chi Minh City</h6>
+                <h6>Waterloo, Ontario (Remote)</h6>
               </div>
             </div>
           </div>
@@ -263,12 +267,57 @@
             <div class="v-line"></div>
             <div class="content mt-4">
               <h4>Full Stack Developer</h4>
-              <p>a asdf safdsf adsf sdf asd </p>
+              <p>NodeJS, React, Express, SQLite, MongoDB</p>
+              <p>Working part-time as a web developer to establish websites to support the company's business.</p>
             </div>
           </div>
         </div>
       </div>
-      <!-- Education -->
+
+      <!-- Graduate Research Assistant -->
+      <div class="info-rect" :class=" tab == 0 && 'fade-in' ">
+        <div class="deco">
+          <div class="circle">
+            <i class="fa-solid fa-circle-nodes"></i>
+          </div>
+          <div class="h-line"></div>
+        </div>
+        <div class="row w-80">
+          <div class="col col-4">
+            <div class="date d-flex justify-content-around mt-4">
+              <div>
+                <h6>From</h6>
+                <p>Jan 2022</p>
+              </div>
+              <div>
+                <h6>To</h6>
+                <p>May 2022</p>
+              </div>
+            </div>
+            <div class="date d-flex justify-content-start mt-4">
+              <div class="img">
+                <!-- <i class="mt-2 fa-solid fa-city fa-2x"></i> -->
+                <img src="./static/img/tru-logo.jpeg" alt="Bounce Back Digital" width="100%" />
+              </div>
+              <div>
+                <h5>Thompson Rivers <br /> University</h5>
+                <h6>Kamloops, BC</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col col-8">
+            <div class="v-line"></div>
+            <div class="content mt-4">
+              <h4>Graduate Research Assistant</h4>
+              <p>MATLAB, Gephi, NetLogo</p>
+              <p>Using graph-based models and agent-based models to analyze the survey data of frontline health workers
+                during the COVID-19 pandemic.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lead Software Engineer -->
       <div class="info-rect" :class=" tab == 1 && 'fade-in' ">
         <div class="deco">
           <div class="circle">
@@ -281,36 +330,206 @@
             <div class="date d-flex justify-content-around mt-4">
               <div>
                 <h6>From</h6>
-                <p>May 2022</p>
+                <p>Mar 2015</p>
               </div>
               <div>
                 <h6>To</h6>
-                <p>Present</p>
+                <p>Mar 2019</p>
               </div>
             </div>
-            <div class="date d-flex justify-content-evenly mt-4">
+            <div class="date d-flex justify-content-start mt-4">
               <div class="img">
                 <!-- <i class="mt-2 fa-solid fa-city fa-2x"></i> -->
-                <img src="./static/img/bounce-back-digital.png" alt="Bounce Back Digital" width="100%" />
+                <img src="./static/img/vng-logo.jpeg" alt="Bounce Back Digital" width="100%" />
               </div>
               <div>
-                <h5>Bounce Back Digital</h5>
-                <h6>Ho Chi Minh City</h6>
+                <h5>VNG Corporation</h5>
+                <h6>Ho Chi Minh city, Viet Nam</h6>
               </div>
             </div>
           </div>
           <div class="col col-8">
             <div class="v-line"></div>
             <div class="content mt-4">
-              <h4>Full Stack Developer</h4>
-              <p>a asdf safdsf adsf sdf asd </p>
+              <h4>Lead Software Engineer</h4>
+              <p>Java, C/C++, JavaScript, MySQL, Redis, Apache Foundation.</p>
+              <p>Design and develop the user acquisition monitoring system, a part of digital marketing tools to display
+                real-time measurements such as NRU, ROI...</p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Senior Software Engineer -->
+      <div class="info-rect" :class=" tab == 1 && 'fade-in' ">
+        <div class="deco">
+          <div class="circle">
+            <i class="fa-solid fa-circle-nodes"></i>
+          </div>
+          <div class="h-line"></div>
+        </div>
+        <div class="row w-80">
+          <div class="col col-4">
+            <div class="date d-flex justify-content-around mt-4">
+              <div>
+                <h6>From</h6>
+                <p>Mar 2013</p>
+              </div>
+              <div>
+                <h6>To</h6>
+                <p>Mar 2015</p>
+              </div>
+            </div>
+            <div class="date d-flex justify-content-start mt-4">
+              <div class="img">
+                <!-- <i class="mt-2 fa-solid fa-city fa-2x"></i> -->
+                <img src="./static/img/vng-logo.jpeg" alt="Bounce Back Digital" width="100%" />
+              </div>
+              <div>
+                <h5>VNG Corporation</h5>
+                <h6>Ho Chi Minh city, Viet Nam</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col col-8">
+            <div class="v-line"></div>
+            <div class="content mt-4">
+              <h4>Senior Software Engineer</h4>
+              <p>Java, C/C++, JavaScript, PHP, C#, MySQL</p>
+              <p>Responsible for many features and products of ZingMe using micro-service architectures. ZingMe used to
+                be the biggest social network platform in Viet Nam, serving multi-million of users in 2015.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Junior Software Engineer -->
+      <div class="info-rect" :class=" tab == 1 && 'fade-in' ">
+        <div class="deco">
+          <div class="circle">
+            <i class="fa-solid fa-circle-nodes"></i>
+          </div>
+          <div class="h-line"></div>
+        </div>
+        <div class="row w-80">
+          <div class="col col-4">
+            <div class="date d-flex justify-content-around mt-4">
+              <div>
+                <h6>From</h6>
+                <p>Mar 2010</p>
+              </div>
+              <div>
+                <h6>To</h6>
+                <p>Mar 2013</p>
+              </div>
+            </div>
+            <div class="date d-flex justify-content-start mt-4">
+              <div class="img">
+                <!-- <i class="mt-2 fa-solid fa-city fa-2x"></i> -->
+                <img src="./static/img/vng-logo.jpeg" alt="Bounce Back Digital" width="100%" />
+              </div>
+              <div>
+                <h5>VNG Corporation</h5>
+                <h6>Ho Chi Minh city, Viet Nam</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col col-8">
+            <div class="v-line"></div>
+            <div class="content mt-4">
+              <h4>Junior Software Engineer</h4>
+              <p>Flash, PHP, Java, C/C++</p>
+              <p>Developing several SNS games published on a local social network platform. The games were
+                completely successful in terms of revenue and users when reach the highest values on the market and
+                became the most popular game played at the time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="info-rect" :class=" tab == 2 && 'fade-in' ">
+        <div class="deco">
+          <div class="circle">
+            <i class="fa-solid fa-circle-nodes"></i>
+          </div>
+          <div class="h-line"></div>
+        </div>
+        <div class="row w-80">
+          <div class="col col-4">
+            <div class="date d-flex justify-content-around mt-4">
+              <div>
+                <h6>From</h6>
+                <p>Dec 2020</p>
+              </div>
+              <div>
+                <h6>To</h6>
+                <p>Aug 2022</p>
+              </div>
+            </div>
+            <div class="date d-flex justify-content-start mt-4">
+              <div class="img">
+                <img src="./static/img/tru-logo.jpeg" alt="tru-logo" width="100%" />
+              </div>
+              <div>
+                <h5>Thompson Rivers University</h5>
+                <h6>Kamloops, BC</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col col-8">
+            <div class="v-line"></div>
+            <div class="content mt-4">
+              <h4>Master of Science in Data Science,<br /> Computer Science</h4>
+              <p>My wonderful journey to archive a higher level of education.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education 2 -->
+      <div class="info-rect" :class=" tab == 2 && 'fade-in' ">
+        <div class="deco">
+          <div class="circle">
+            <i class="fa-solid fa-circle-nodes"></i>
+          </div>
+          <div class="h-line"></div>
+        </div>
+        <div class="row w-80">
+          <div class="col col-4">
+            <div class="date d-flex justify-content-around mt-4">
+              <div>
+                <h6>From</h6>
+                <p>Sep 2006</p>
+              </div>
+              <div>
+                <h6>To</h6>
+                <p>Sep 2010</p>
+              </div>
+            </div>
+            <div class="date d-flex justify-content-start mt-4">
+              <div class="img">
+                <img src="./static/img/vnu_logo.jpeg" alt="vnu_logo" width="100%" />
+              </div>
+              <div>
+                <h5>Vietnam National University, HCMC</h5>
+                <h6>Ho Chi Minh city, Viet Nam</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col col-8">
+            <div class="v-line"></div>
+            <div class="content mt-4">
+              <h4>Bachelor's Degree in Software Engineer, <br /> Computer Software Engineering</h4>
+              <p>The first milestone of my career in software engineering.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
-    <section class="sec-2" style="height: 200px; position: relative;">
+    <section class="sec-2" style="height: 200px; position: relative; margin-top: 0;">
       <div id="contact" class="v-line" style="top: -120px;"></div>
       <h1 style="margin-top: 160px;"><span style="color:white">Get</span> Intouch</h1>
       <div class="watermark" style="left: 50%;">contact me</div>
