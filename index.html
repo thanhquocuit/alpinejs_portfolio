@@ -74,19 +74,18 @@
     <div class="container" style="position: relative; margin-top: 5rem;">
       <div id="resume" class="watermark" style="left: 50%; margin-top: -8rem;">professional</div>
       <div class="row who-am-i">
-        <div class="col c-2nd">
+        <div class="col c-2nd desc" x-data="{readmore:false}">
           <h5>Know</h5>
           <h3>about me</h3>
           <p class="mt-5 mb-5">Over 8+ years of experience in software development, I had opportunities to work with
-            many types
-            and scales of IT projects, from user-end applications to backend applications or deep research topics.
+            many types and scales of IT projects, from user-end applications to backend applications or deep research topics.
             Challenging from previous works rewards me with wide knowledge about a range of programming
-            languages, libraries, frameworks, operation systems such as Windows, LINUX, MacOS, and the world of
+            languages <span x-show="readmore">, libraries, frameworks, operation systems such as Windows, LINUX, MacOS, and the world of
             open-source software. Therefore, I am confident and willing to take responsibility for developing and
             maintaining the reliability and stability of software applications. Knowing that, besides programming
             skills, leadership and management are also important aspects of the development process, I always
             concentrate on improving my self-management, management, and leadership skills to ensure the
-            progress and success of projects</p>
+            progress and success of projects.</span><a x-show="!readmore" @click="readmore = true">...(read more)</a></p>
           <a href="./static/Resume-2022-Thanh-Quoc-Pham.pdf" target="_blank">
             <button id="download-cv"><i class="fa-solid fa-download"></i> &nbsp; Download CV</button>
           </a>
